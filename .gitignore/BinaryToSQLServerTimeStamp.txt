@@ -1,0 +1,7 @@
+private String convertToSQLServerTimestamp(byte[] timestamp) {
+		String timeStamp_response = null;
+		if (timestamp != null) {
+			timeStamp_response = String.format("0x%016X", ByteBuffer.wrap(timestamp).getLong());
+		}
+		return timeStamp_response;
+	}
